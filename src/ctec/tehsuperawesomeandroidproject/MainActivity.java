@@ -30,27 +30,20 @@ public class MainActivity extends Activity
 
 	private void setupListeners()
 	{
-		// TODO Auto-generated method 
+		// TODO Auto-generated method
 		tehButton.setOnClickListener(new View.OnClickListener()
 		{
 			@Override
-			public void  onClick(View currentView)
+			public void onClick(View currentView)
 			{
-				try{
-					if(true)
-					{
-						DogeFace.setVisibility(View.INVISIBLE);
-					}
-					else
-					{
-						DogeFace.setVisibility(View.VISIBLE);
-				
-					}
-				}	
-				catch(NullPointerException)
+				if (DogeFace.getVisibility() == View.VISIBLE)
 				{
-					
+					DogeFace.setVisibility(View.INVISIBLE);
+				} else
+				{
+					DogeFace.setVisibility(View.VISIBLE);
 				}
+
 			}
 		});
 	}
